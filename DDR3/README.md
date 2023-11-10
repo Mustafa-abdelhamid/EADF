@@ -1,5 +1,5 @@
 # DDR3 memory user interface documentation
-![image](https://github.com/Mustafa-abdelhamid/EADF/assets/90484856/d70c25d6-5ec3-4a73-9c84-6a5c62a14af4)
+   ![image](https://github.com/Mustafa-abdelhamid/EADF/assets/90484856/d70c25d6-5ec3-4a73-9c84-6a5c62a14af4)
 ## Module Port Documentation
 ### Clock and reset 
 | **Port**         | **Direction** | **Width** | **Description**                                          |
@@ -51,14 +51,14 @@
    - CMD_EN = 1
    - blen = 1 ( in our case we are just writing one address ... can be changed)
    - Address = begining of address to write ( Addr : Addr+blen will be written)
-2. Wait for **CMD_ACK** signal to indicate that the command is accepted.
-3. Now the controller is being prepared to accept a write command So wait for **wdata_rdy** to be asserted
+2. Wait for `cmd_ack` signal to indicate that the command is accepted.
+3. Now the controller is being prepared to accept a write command So wait for `wdata_rdy` to be asserted
 4. After the controller is ready put the data and raise a valid signal.
    ![image](https://github.com/Mustafa-abdelhamid/EADF/assets/90484856/7e3c650d-0b52-4061-8739-24968419b1ad)
    ![image](https://github.com/Mustafa-abdelhamid/EADF/assets/90484856/d7c577b0-1f2f-4a49-b699-9df42a56b534)
 
 NOTE:
-- wdata_valid should stay high for blen+1 cycles
-- wdata_cmptd should be two cycles and should overlap with wdata_valid
-- wdata_sts_valid indicate the end of write operation.
+- `wdata_valid` should stay high for blen+1 cycles
+- `wdata_cmptd` should be two cycles and should overlap with wdata_valid
+- `wdata_sts_valid` indicates the end of write operation.
 
