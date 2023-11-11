@@ -1,5 +1,16 @@
-# DDR3 memory user interface documentation
-   ![image](img/app_example.PNG)
+- In this project. It's required to have a simple interface to include DDR3 devices using enclustra kx1 kit.
+- A DDR Subsystem is made up of three components:
+	- DRAM memory itself: DDR3 in our case
+	- DDR PHY
+	- DDR controller
+   ![ddr3_subsys](img/ddr4-basics-sub-system.PNG)
+
+- Vivado has a reconfigurable IP for memory controller that include both memory controller and the phy. ***MIG*** 
+- A user interface in simplified using `axi_wrapper.v` module which has a simpler interface
+- An example for a user application is provided to help understanding user interface and facilitate development of real user application.
+
+## DDR3 memory user interface documentation
+   ![blockdesign](img/app_example.PNG)
 ## Module Port Documentation
 ### Clock and reset 
 | **Port**         | **Direction** | **Width** | **Description**                                          |
@@ -54,9 +65,6 @@
 2. Wait for `cmd_ack` signal to indicate that the command is accepted.
 3. Now the controller is being prepared to accept a write command So wait for `wdata_rdy` to be asserted
 4. After the controller is ready put the data and raise a valid signal.
-   ![image](https://github.com/Mustafa-abdelhamid/EADF/assets/90484856/7e3c650d-0b52-4061-8739-24968419b1ad)
-   ![image](https://github.com/Mustafa-abdelhamid/EADF/assets/90484856/d7c577b0-1f2f-4a49-b699-9df42a56b534)
-
 NOTE:
 - `wdata_valid` should stay high for blen+1 cycles
 - `wdata_cmptd` should be two cycles and should overlap with wdata_valid
