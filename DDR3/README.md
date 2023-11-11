@@ -1,5 +1,5 @@
 # DDR3 memory user interface documentation
-   ![image](https://github.com/Mustafa-abdelhamid/EADF/assets/90484856/d70c25d6-5ec3-4a73-9c84-6a5c62a14af4)
+   ![image](img/app_example.png)
 ## Module Port Documentation
 ### Clock and reset 
 | **Port**         | **Direction** | **Width** | **Description**                                          |
