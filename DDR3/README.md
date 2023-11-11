@@ -1,5 +1,5 @@
 # DDR3 memory user interface documentation
-   ![image](img/app_example.png)
+   ![image](img/app_example.PNG)
 ## Module Port Documentation
 ### Clock and reset 
 | **Port**         | **Direction** | **Width** | **Description**                                          |
