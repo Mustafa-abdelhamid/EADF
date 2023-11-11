@@ -1,2 +1,1 @@
 # EADF
-Military projects repo
