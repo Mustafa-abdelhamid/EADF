@@ -3,7 +3,7 @@
 	- DRAM memory itself: DDR3 in our case
 	- DDR PHY
 	- DDR controller
-   ![ddr3_subsys](img/ddr4-basics-sub-system.PNG)
+   ![ddr3_subsys](img/ddr4-basics-sub-system.png)
 
 - Vivado has a reconfigurable IP for memory controller that include both memory controller and the phy. ***MIG*** 
 - A user interface in simplified using `axi_wrapper.v` module which has a simpler interface
